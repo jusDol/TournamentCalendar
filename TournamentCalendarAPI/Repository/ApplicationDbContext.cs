@@ -7,6 +7,7 @@ namespace TournamentCalendarAPI.Repository
     {
         public DbSet<Event> Events { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
+        public DbSet<UserDto> User { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
     }

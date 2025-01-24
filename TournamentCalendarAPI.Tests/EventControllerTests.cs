@@ -26,8 +26,8 @@ namespace TournamentCalendarAPI.Tests
             // Arrange
             var events = new List<Event>
             {
-                new Event { Id = 1, Title = "Pokemon Tournament", MaxParticipants = 16 },
-                new Event { Id = 2, Title = "KeyForge Championship", MaxParticipants = 32 }
+                new Event { Id = 1, Title = "Pokemon Tournament"},
+                new Event { Id = 2, Title = "KeyForge Championship" }
             };
 
             _mockEventRepository.Setup(repo => repo.GetAllAsync())
@@ -46,7 +46,7 @@ namespace TournamentCalendarAPI.Tests
         public async Task GetById_ValidId_ReturnsOkResult_WithEvent()
         {
             // Arrange
-            var testEvent = new Event { Id = 1, Title = "Pokemon Tournament", MaxParticipants = 16 };
+            var testEvent = new Event { Id = 1, Title = "Pokemon Tournament"     };
 
             _mockEventRepository.Setup(repo => repo.GetByIdAsync(1))
                 .ReturnsAsync(testEvent);
@@ -78,7 +78,7 @@ namespace TournamentCalendarAPI.Tests
         public async Task Add_ValidEvent_ReturnsCreatedAtActionResult()
         {
             // Arrange
-            var newEvent = new Event { Id = 3, Title = "Lorcana Event", MaxParticipants = 20 };
+            var newEvent = new Event { Id = 3, Title = "Lorcana Event" };
 
             _mockEventRepository.Setup(repo => repo.AddAsync(newEvent))
                 .ReturnsAsync(newEvent);
@@ -96,7 +96,7 @@ namespace TournamentCalendarAPI.Tests
         public async Task Update_ValidEvent_ReturnsOkResult()
         {
             // Arrange
-            var updatedEvent = new Event { Id = 1, Title = "Updated Tournament", MaxParticipants = 25 };
+            var updatedEvent = new Event { Id = 1, Title = "Updated Tournament" };
 
             _mockEventRepository.Setup(repo => repo.UpdateAsync(updatedEvent))
                 .ReturnsAsync(updatedEvent);
@@ -114,7 +114,7 @@ namespace TournamentCalendarAPI.Tests
         public async Task Update_InvalidEventId_ReturnsBadRequest()
         {
             // Arrange
-            var updatedEvent = new Event { Id = 2, Title = "Invalid Tournament", MaxParticipants = 20 };
+            var updatedEvent = new Event { Id = 2, Title = "Invalid Tournament" };
 
             // Act
             var result = await _controller.Update(1, updatedEvent);

@@ -48,8 +48,8 @@ namespace TournamentCalendarAPI.Repository
             if (existingEvent == null) return null;
 
             existingEvent.Title = updatedEvent.Title;
-            existingEvent.Date = updatedEvent.Date;
-            existingEvent.MaxParticipants = updatedEvent.MaxParticipants;
+            existingEvent.Start = updatedEvent.Start;
+            existingEvent.End = updatedEvent.End;
             await _context.SaveChangesAsync();
 
             return existingEvent;

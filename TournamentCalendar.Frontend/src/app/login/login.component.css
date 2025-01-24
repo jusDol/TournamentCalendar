@@ -1,0 +1,97 @@
+/* Kontener logowania */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Nagłówek formularza */
+  .login-container h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Grupa formularza */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Etykieta */
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+  }
+  
+  /* Pole wejściowe formularza */
+  .form-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Zmiana koloru ramki pola wejściowego podczas aktywności */
+  .form-group input:focus {
+    outline: none;
+    border-color: #4C9F70;
+  }
+  
+  /* Przyciski */
+  button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #4C9F70;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Zmiana tła przycisku po najechaniu */
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Wyłączony przycisk */
+  button[type="submit"]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Komunikat o błędzie */
+  .error-message {
+    margin-top: 20px;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  /* Media Queries - responsywność formularza */
+  @media (max-width: 480px) {
+    .login-container {
+      padding: 15px;
+    }
+  
+    .login-container h2 {
+      font-size: 1.5rem;
+    }
+  
+    .form-group input,
+    button[type="submit"] {
+      padding: 10px;
+    }
+  }
+  

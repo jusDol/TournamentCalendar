@@ -35,11 +35,6 @@ namespace TournamentCalendarAPI.Controllers
                     return NotFound($"Event with ID {newReservation.EventId} not found.");
                 }
 
-                var existingReservations = await _reservationRepository.GetAllForEventAsync(newReservation.EventId); // <- Zastosowanie await, by uzyskać wynik
-                if (existingReservations.Count() >= relatedEvent.MaxParticipants)
-                {
-                    return BadRequest($"Cannot add reservation. Event with ID {newReservation.EventId} has reached the maximum number of participants.");
-                }
 
                 var createdReservation = await _reservationRepository.AddAsync(newReservation);
                 return Ok(createdReservation);

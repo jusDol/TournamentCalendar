@@ -1,0 +1,224 @@
+/* RESET CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, sans-serif;
+    background-color: #f2f7fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Struktura aplikacji */
+.demo-app {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+    font-size: 14px;
+    background: linear-gradient(to bottom, #00bcd4 0%, #4ca1af 100%); /* Zmiana gradientu dla większego efektu */
+}
+
+/* Sidebar */
+.demo-app-sidebar {
+    width: 320px;
+    background-color: #ffffff;
+    border-right: 2px solid rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 30px 25px;
+    color: #444;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Przełom, zaokrąglenie */
+.demo-app-sidebar:hover {
+    transform: translateX(-5px);
+}
+
+/* Sidebar Sekcja */
+.sidebar-section {
+    margin-bottom: 30px;
+}
+
+/* Tytuły sekcji */
+.sidebar-section h2 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #00bcd4;
+    margin-bottom: 15px;
+}
+
+/* Ulepszony wygląd list */
+.sidebar-section ul {
+    list-style: none;
+    padding-left: 1.5em;
+    font-size: 15px;
+    color: #666;
+}
+
+.sidebar-section li {
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+/* Zmiana checkboxów */
+label {
+    font-size: 15px;
+    color: #666;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Wygląd Main */
+.demo-app-main {
+    flex-grow: 1;
+    padding: 40px;
+    color: #444;
+    overflow: hidden;
+    position: relative;
+    background-color: #fefefe;
+    box-shadow: -4px 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+/* Kalendarium */
+.fc {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    max-width: 100%;
+    margin: 20px auto;
+}
+
+/* Przyciski kalendarza */
+.fc-button {
+    background-color: #00bcd4;
+    color: #fff;
+    border: 2px solid #00bcd4;
+    border-radius: 4px;
+    font-weight: 600;
+    box-shadow: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.fc-button:hover {
+    background-color: #00acc1;
+    transform: scale(1.05);
+}
+
+/* Kalendarz tła */
+.fc-toolbar {
+    background-color: #00bcd4;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Kolory wydarzeń */
+.fc-event {
+    background-color: #00acc1;
+    color: white;
+    border-radius: 10px;
+    padding: 6px 10px;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    transition: background-color 0.3s, box-shadow 0.3s ease-in-out;
+}
+
+.fc-event:hover {
+    background-color: #0288d1;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Styl Wydarzeń */
+.event-content {
+    padding: 8px;
+    background: rgba(0, 188, 212, 0.2);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.fc-daygrid-event {
+    cursor: pointer;
+}
+
+.event-content:hover {
+    transform: translateY(-5px);
+}
+
+/* Eleganckie szczegóły wydarzenia */
+.event-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.event-time {
+    font-weight: bold;
+    font-size: 13px;
+    color: #444;
+}
+
+.event-title {
+    font-style: italic;
+    font-size: 16px;
+    color: #00838f;
+    margin-top: 4px;
+}
+
+/* Listy i instrukcje */
+ul li span {
+    display: block;
+}
+
+ul li span.event-time {
+    font-weight: bold;
+    font-size: 14px;
+    color: #00796b;
+}
+
+ul li span.event-title {
+    font-style: italic;
+    color: #00838f;
+}
+
+/* Efekty hover */
+ul li:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s;
+    border-radius: 8px;
+}
+
+/* Responsywność */
+@media (max-width: 1024px) {
+    .demo-app {
+        flex-direction: column;
+    }
+
+    .demo-app-sidebar {
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: none;
+    }
+
+    .demo-app-main {
+        padding: 20px;
+        box-shadow: none;
+        margin-top: 10px;
+    }
+
+    .fc {
+        padding: 10px;
+    }
+}

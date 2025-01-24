@@ -19,6 +19,25 @@ namespace TournamentCalendarAPI.Controllers
         [HttpGet("get-all")]
         public async Task<IActionResult> GetAll()
         {
+            // var events = new List<Event>()
+            //{
+            //    new Event()
+            //    {
+            //        Id =1,
+            //        Title="dupa",
+            //        Start = DateTime.Now.AddDays(1),
+            //        End = DateTime.Now.AddDays(1).AddHours(1),
+            //        AllDay = false
+            //    },
+            //    new Event()
+            //    {
+            //        Id =2,
+            //        Title="dupa2",
+            //        Start = DateTime.Now.AddDays(1),
+            //        End = DateTime.Now.AddDays(1).AddHours(1),
+            //        AllDay = false
+            //    },
+            //};
             var events = await _eventRepository.GetAllAsync();
             return Ok(events);
         }

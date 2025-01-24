@@ -47,7 +47,7 @@ namespace TournamentCalendarAPI.Tests
         {
             // Arrange
             var newReservation = new Reservation { Id = 1, UserName = "Charlie", Email = "charlie@example.com", EventId = 1 };
-            var relatedEvent = new Event { Id = 1, Title = "Test Event", MaxParticipants = 2 };
+            var relatedEvent = new Event { Id = 1, Title = "Test Event" };
             var existingReservations = new List<Reservation>
             {
                 new Reservation { Id = 2, UserName = "Bob", Email = "bob@example.com", EventId = 1 }
@@ -93,7 +93,7 @@ namespace TournamentCalendarAPI.Tests
         {
             // Arrange
             var newReservation = new Reservation { Id = 3, UserName = "Derek", Email = "derek@example.com", EventId = 1 };
-            var relatedEvent = new Event { Id = 1, Title = "Full Event", MaxParticipants = 2 };
+            var relatedEvent = new Event { Id = 1, Title = "Full Event" };
             var existingReservations = new List<Reservation>
             {
                 new Reservation { Id = 1, UserName = "Alice", Email = "alice@example.com", EventId = 1 },
